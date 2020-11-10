@@ -30,6 +30,10 @@ header {
     padding: 20px 10px;
 }
 
+header img{
+    height: auto;
+}
+
 section {
     padding: 0 15px;
 }
