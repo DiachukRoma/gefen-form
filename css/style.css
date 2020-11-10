@@ -1,0 +1,275 @@
+/**
+ *	Style for Form page
+ *  Author: Diachuk R.M.
+ * 
+ */
+@font-face {
+    font-family: 'adrenaline';
+    src: url('../fonts/adrenalinregularwebfont.eot');
+    src: url('../fonts/adrenalinregularwebfont?iefix') format('eot'),
+        url('../fonts/adrenalinregularwebfont.woff') format('woff'),
+        url('../fonts/adrenalinregularwebfont.ttf') format('truetype'),
+        url('../fonts/adrenalinregularwebfont.svg#webfont') format('svg');
+    font-weight: normal;
+}
+
+html,
+body {
+    font-family: "adrenaline";
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header {
+    padding: 20px 10px;
+}
+
+section {
+    padding: 0 15px;
+}
+
+.form-title {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.form-sub-title {
+    margin-bottom: 20px;
+}
+
+.form-title-in {
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: #8c8c8c;
+}
+
+.form-sub-title-in {
+    margin-bottom: 35px;
+}
+
+.agree {
+    text-align: center;
+    margin-top: 35px;
+}
+
+.bsubmit {
+    background-color: #4CAF50 !important;
+}
+
+.progressBar {
+    padding: 20px 30px 40px;
+}
+
+.logo {
+    text-align: left;
+}
+
+.borderPage {
+    border: 10px solid #083962;
+    height: 100%;
+    width: 100%;
+}
+
+.tac {
+    text-align: center;
+}
+
+.mar {
+    margin: auto;
+}
+
+.prBarSteps,
+.prBarSteps span {
+    display: flex;
+    justify-content: center;
+}
+
+.prBarSteps span {
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    border-radius: 100%;
+    background-color: #ced4da;
+    color: #fff;
+    font-size: 30px;
+    padding-top: 4px;
+    position: relative;
+    z-index: 10;
+}
+
+.prBarSteps:before {
+    position: absolute;
+    height: 4px;
+    top: 50%;
+    margin-top: -3px;
+    left: 0;
+    width: 50%;
+    content: '';
+    background: #dee2e6;
+    z-index: 5;
+    transition: all .2s;
+}
+
+.prBarSteps:after {
+    position: absolute;
+    height: 4px;
+    top: 50%;
+    margin-top: -3px;
+    right: 0;
+    width: 50%;
+    content: '';
+    background: #dee2e6;
+    z-index: 5;
+    transition: all .2s;
+}
+
+.prBarSteps.active span {
+    background: #3f6ad8;
+}
+
+.prBarSteps.success span,
+.prBarSteps.success:before,
+.prBarSteps.success:after {
+    background: #24b572;
+}
+
+.prBarSteps.success span:after {
+    content: '';
+    background: url("../img/check-circle-regular.svg");
+    position: absolute;
+    z-index: 50;
+    width: 24px;
+    height: 24px;
+    color: #fff;
+    background-color: #24b572;
+    margin-top: -2px;
+}
+
+.prBarSteps.active:before {
+    background: #3f6ad8;
+}
+
+.prBarSteps.active:after {
+    background: #3f6ad8;
+}
+
+.btnSteps {
+    display: flex;
+    justify-content: space-between;
+    visibility: hidden;
+    padding: 0 30px 30px;
+    direction: ltr;
+}
+
+.btnSteps .show {
+    visibility: visible;
+}
+
+.hrFormSub {
+    padding: 0 30px 15px;
+}
+
+.hrFormSub hr {
+    border: 0;
+    border-bottom: 1px solid #ced4da;
+}
+
+.btnStep button {
+    min-height: 44px;
+    min-width: 120px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #3f6ad8;
+    border: 0;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+
+.btnStep button:hover {
+    background-color: #083962;
+    transition: all 0.4s ease-in-out;
+}
+
+.btnStep button.success {
+    background-color: #24b572;
+    transition: all 0.4s ease-in-out;
+}
+
+.btnStep button.success:hover {
+    background-color: #008f4d;
+    transition: all 0.4s ease-in-out;
+}
+
+.singleSect {
+    display: none;
+}
+
+.singleSect.zero {
+    padding: 40px 15px;
+}
+
+.singleSect.select {
+    display: block;
+}
+
+ul {
+    list-style-type: none;
+    padding-right: 38px;
+}
+
+ul li {
+    padding-bottom: 26px;
+    position: relative;
+}
+
+ul li .title {
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+}
+
+ul li .description p {
+    line-height: 24px;
+    margin: 0;
+    padding: 15px 0;
+}
+
+.description ol{
+    padding-top: 30px;
+    padding-right: 16px;
+}
+
+.description img{
+    max-width: calc(50% - 15px);
+    padding-top: 30px;
+}
+
+.toggleList::before {
+    content: '';
+    position: absolute;
+    right: -36px;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background: url('../img/arrow.png') center center no-repeat;
+    background-size: contain;
+    transform: rotate(90deg);
+    transition: all 0.4s ease-in-out;
+}
+
+.toggleList.active::before {
+    transform: rotate(0);
+    transition: all 0.4s ease-in-out;
+}
+
+.singleSect.five .title{
+    font-size: 58px;
+}
