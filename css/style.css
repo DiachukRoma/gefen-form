@@ -34,6 +34,12 @@ header img{
     height: auto;
 }
 
+@media screen and (max-width: 768px){
+    header img {
+        max-height: 90px;
+    }
+}
+
 section {
     padding: 0 15px;
 }
