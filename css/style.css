@@ -40,12 +40,6 @@ iframe {
     height: auto !important;
 }
 
-@media screen and (max-width: 768px){
-    header img {
-        max-height: 90px;
-    }
-}
-
 section {
     padding: 0 15px;
 }
@@ -288,4 +282,14 @@ ul li .description p {
 
 .singleSect.five .title{
     font-size: 58px;
+}
+
+@media screen and (max-width: 768px) {
+    header img {
+        max-height: 90px;
+    }
+
+    .description img {
+        max-width: 100%;
+    }
 }
