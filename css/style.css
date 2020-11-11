@@ -20,9 +20,15 @@ body {
     margin: 0;
 }
 
+p,
+ol li {
+    line-height: 24px;
+    font-size: 18px;
+}
+
 body {
     display: flex;
-    align-items: center;
+    padding: 15px 0;
     min-height: 100vh;
 }
 
@@ -30,13 +36,14 @@ header {
     padding: 20px 10px;
 }
 
-header img{
+header img {
     height: auto;
 }
 
 video,
 iframe {
     width: 100% !important;
+    max-width: 800px;
 }
 
 section {
@@ -243,21 +250,22 @@ ul li .title {
     cursor: pointer;
     margin: 0;
     padding: 0;
+    font-size: 25px;
 }
 
 ul li .description p {
     line-height: 24px;
     margin: 0;
     padding: 15px 0;
+    font-size: 18px;
 }
 
-.description ol{
+.description ol {
     padding-top: 30px;
     padding-right: 16px;
 }
 
-.description img{
-    max-width: calc(50% - 15px);
+.description img {
     padding-top: 30px;
 }
 
@@ -279,11 +287,58 @@ ul li .description p {
     transition: all 0.4s ease-in-out;
 }
 
-.singleSect.five .title{
+.singleSect.five .title {
     font-size: 58px;
 }
 
+.left_hr {
+    position: relative;
+    padding-right: 0;
+}
+
+.left_hr::after {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 50px;
+    height: calc(100% - 50px);
+    width: 1px;
+    background-color: #ced4da;
+}
+
+#list_3 h3.title {
+    font-size: 24px;
+    line-height: 1.4;
+}
+
+#list_3 .description_items .item {
+    padding-right: 20px;
+    position: relative;
+}
+
+#list_3 .description_items .item::before {
+    content: '•';
+    color: #686868;
+    position: absolute;
+    right: 6px;
+    top: -1px;
+}
+
+#list_3 .description_items h4 {
+    margin: 20px 0 0;
+    color: #686868;
+}
+
+#list_3 .description_items p {
+    padding: 0;
+    color: #686868;
+}
+
 @media screen and (max-width: 768px) {
+    body {
+        padding: 0;
+    }
+
     header img {
         max-height: 90px;
     }
@@ -295,5 +350,23 @@ ul li .description p {
     video,
     iframe {
         height: auto !important;
+    }
+
+    .prBarSteps span {
+        width: 35px;
+        height: 35px;
+        font-size: 22px;
+    }
+
+    #list_3 .description .col-md-6{
+        padding: 0;
+    }
+
+    .left_hr::after {
+        display: none;
+    }
+
+    .borderPage {
+        min-height: 100vh;
     }
 }
