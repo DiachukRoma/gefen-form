@@ -4,18 +4,14 @@
  * 
  */
 @font-face {
-    font-family: 'adrenaline';
-    src: url('../fonts/adrenalinregularwebfont.eot');
-    src: url('../fonts/adrenalinregularwebfont?iefix') format('eot'),
-        url('../fonts/adrenalinregularwebfont.woff') format('woff'),
-        url('../fonts/adrenalinregularwebfont.ttf') format('truetype'),
-        url('../fonts/adrenalinregularwebfont.svg#webfont') format('svg');
+    font-family: 'Assistant';
+    src: url('../fonts/Assistant.ttf') format('truetype');
     font-weight: normal;
 }
 
 html,
 body {
-    font-family: "adrenaline";
+    font-family: "Assistant";
     padding: 0;
     margin: 0;
 }
