@@ -2,6 +2,8 @@ $(document).ready(function () {
     $('.btnStepNext').click(function () {
         let step = parseInt($('.prBarSteps.active').data('step'));
 
+        $('.btnStepPrev, .btnStepNext').removeClass('show');
+
         $('.prBarSteps.active').addClass('success').removeClass('active');
         $(`.prBarSteps[data-step="${step + 1}"]`).addClass('active');
 
@@ -13,6 +15,8 @@ $(document).ready(function () {
     $('.btnStepPrev').click(function () {
         let step = parseInt($('.prBarSteps.active').data('step'));
 
+        $('.btnStepPrev, .btnStepNext').removeClass('show');
+
         $('.prBarSteps.active').removeClass('active');
         $(`.prBarSteps[data-step="${step - 1}"]`).removeClass('success').addClass('active');
 
@@ -22,10 +26,10 @@ $(document).ready(function () {
     });
 
     function zeroSelect() {
+        $('.singleSect.step__4').is('.select') ? $('.btnStepNext button').addClass('success').html('סיום') : $('.btnStepNext button').removeClass('success').html('המשך');
         $('.singleSect.step__0').is('.select') ? $('.progressBar').hide() : $('.progressBar').show();
         $('.singleSect.step__0').is('.select') ? $('.btnStepPrev').removeClass('show') : $('.btnStepPrev').addClass('show');
-        $('.singleSect.step__4').is('.select') ? $('.btnStepNext button').addClass('success').html('סיום') : $('.btnStepNext button').removeClass('success').html('המשך');
-        $('.singleSect.step__5').is('.select') ? $('.btnStepNext, .btnStepPrev').removeClass('show') : console.log('1');;
+        $('.singleSect.step__5').is('.select') ? $('.btnStepNext').removeClass('show') : $('.btnStepNext').addClass('show');
     }
     zeroSelect();
 

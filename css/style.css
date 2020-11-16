@@ -78,6 +78,16 @@ section {
     padding: 20px 30px 40px;
 }
 
+.progressName {
+    position: absolute;
+    margin: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 15px;
+    font-weight: 600;
+    color: #6c6c6c;
+}
+
 .logo {
     text-align: left;
 }
@@ -202,22 +212,19 @@ section {
     border-radius: 5px;
     outline: none;
     cursor: pointer;
-    transition: all 0.4s ease-in-out;
+    transition: background-color 0.4s ease-in-out;
 }
 
 .btnStep button:hover {
     background-color: #083962;
-    transition: all 0.4s ease-in-out;
 }
 
 .btnStep button.success {
     background-color: #24b572;
-    transition: all 0.4s ease-in-out;
 }
 
 .btnStep button.success:hover {
     background-color: #008f4d;
-    transition: all 0.4s ease-in-out;
 }
 
 .singleSect {
